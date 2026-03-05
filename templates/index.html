@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI记账系统</title>
+</head>
+
+<body>
+
+<h1>AI记账系统</h1>
+
+<h3>总收入：￥{{total_income}}</h3>
+<h3>总支出：￥{{total_expense}}</h3>
+<h3>利润：￥{{profit}}</h3>
+
+
+<hr>
+
+<h2>统计图</h2>
+
+<img src="/static/chart.png" width="400">
+
+<hr>
+<hr>
+
+<a href="/add_income">
+<button>添加收入</button>
+</a >
+
+<a href="/add_expense">
+<button>添加支出</button>
+</a >
+
+<hr>
+
+<h2>收入记录</h2>
+
+<table border="1">
+
+<tr>
+<th>日期</th>
+<th>金额</th>
+<th>备注</th>
+<th>操作</th>
+</tr>
+
+{% for i in incomes %}
+<tr>
+<td>{{i[2]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[3]}}</td>
+<td><a href=" ">删除</a ></td>
+</tr>
+{% endfor %}
+
+</table>
+
+<h2>支出记录</h2>
+
+<table border="1">
+
+<tr>
+<th>日期</th>
+<th>金额</th>
+<th>备注</th>
+<th>操作</th>
+</tr>
+
+{% for e in expenses %}
+<tr>
+<td>{{e[2]}}</td>
+<td>{{e[1]}}</td>
+<td>{{e[3]}}</td>
+<td><a href=" ">删除</a ></td>
+</tr>
+{% endfor %}
+
+</table>
