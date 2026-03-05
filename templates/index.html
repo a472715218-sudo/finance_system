@@ -49,7 +49,7 @@
 <td>{{i[2]}}</td>
 <td>{{i[1]}}</td>
 <td>{{i[3]}}</td>
-<td><a href=" ">删除</a ></td>
+<a href="/delete_expense/{{ i[0] }} ">删除</a >
 </tr>
 {% endfor %}
 
@@ -72,7 +72,7 @@
 <td>{{e[1]}}</td> 
 <td>{{e[3]}}</td>
 <td>
-<a href="/delete_expense/{{ row[0] }} ">删除</a >
+<a href="/delete_expense/{{ e[0] }} ">删除</a >
 </td>
 </tr>
 {% endfor %}

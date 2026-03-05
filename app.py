@@ -102,9 +102,9 @@ def add_expense():
 def delete_income(id):
 
     conn = sqlite3.connect("finance.db")
-    c = conn.cursor()
+    cursor = conn.cursor()
 
-    c.execute("DELETE FROM income WHERE id=?", (id,))
+    cursor.execute("DELETE FROM income WHERE id=?", (id,))
 
     conn.commit()
     conn.close()
