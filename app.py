@@ -112,13 +112,12 @@ def delete_income(id):
     return redirect("/")
 
 
-@app.route("/delete_expense/<int:id>")
+@app.route('/delete_expense/<int:id>')
 def delete_expense(id):
-
     conn = sqlite3.connect("finance.db")
-    c = conn.cursor()
+    cursor = conn.cursor()
 
-    c.execute("DELETE FROM expense WHERE id=?", (id,))
+    cursor.execute("DELETE FROM expense WHERE id=?", (id,))
 
     conn.commit()
     conn.close()
